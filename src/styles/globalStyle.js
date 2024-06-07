@@ -3,15 +3,15 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
-  // Global styles
+ 
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F0F8F0', 
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    color: '#000000',
+    color: '#3B3B3B', 
   },
   boldText: {
     fontWeight: 'bold',
@@ -20,7 +20,7 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   button: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#4CAF50', 
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
@@ -34,16 +34,16 @@ export default StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#B0C4B1', 
     padding: 15,
     borderRadius: 8,
     marginVertical: 10,
     width: width * 0.8,
-    backgroundColor: '#FFF',
-    color: '#000',
+    backgroundColor: '#FFFFFF',
+    color: '#3B3B3B',
   },
   card: {
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#E8F5E9', 
     padding: 20,
     borderRadius: 10,
     marginVertical: 10,
@@ -57,16 +57,16 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   link: {
-    color: '#007BFF',
+    color: '#388E3C', 
     textDecorationLine: 'underline',
   },
   projectName: {
     fontSize: 32,
     fontWeight: 'bold',
     marginBottom: 40,
-    color: '#000000',
+    color: '#2E7D32',
   },
-  // Specific screen styles
+  
   onboardingContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -86,11 +86,11 @@ export default StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: '#D3D3D3',
+    backgroundColor: '#C8E6C9', 
     marginHorizontal: 5,
   },
   indicatorDotActive: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#4CAF50', 
   },
   loginContainer: {
     flex: 1,
@@ -123,7 +123,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#B0C4B1', 
     borderRadius: 8,
     marginVertical: 10,
     padding: 15,
@@ -139,7 +139,7 @@ export default StyleSheet.create({
     width: width * 0.8,
     marginVertical: 10,
   },
-  // Additional specific screen styles
+ 
   menuContainer: {
     flex: 1,
     padding: 20,
@@ -154,29 +154,29 @@ export default StyleSheet.create({
     marginVertical: 5,
   },
   chatBubbleUser: {
-    backgroundColor: '#E7F3FF',
+    backgroundColor: '#C8E6C9',
     alignSelf: 'flex-end',
   },
   chatBubbleSystem: {
-    backgroundColor: '#F1F1F1',
+    backgroundColor: '#E8F5E9', 
     alignSelf: 'flex-start',
   },
   chatInputContainer: {
     flexDirection: 'row',
     padding: 10,
     borderTopWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#B0C4B1', 
   },
   chatInput: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#B0C4B1',
     borderRadius: 8,
     padding: 10,
     marginRight: 10,
   },
   chatSendButton: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#4CAF50', 
     padding: 10,
     borderRadius: 8,
     alignItems: 'center',
@@ -187,7 +187,7 @@ export default StyleSheet.create({
     padding: 20,
   },
   historyCard: {
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#E8F5E9',
     padding: 20,
     borderRadius: 10,
     marginVertical: 10,
@@ -201,7 +201,7 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   moreLink: {
-    color: '#007BFF',
+    color: '#388E3C', // Dark green link
     textDecorationLine: 'underline',
     textAlign: 'center',
     marginTop: 10,

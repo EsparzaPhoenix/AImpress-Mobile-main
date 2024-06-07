@@ -9,6 +9,7 @@ import ResetPassword from './src/screens/ResetPassword';
 import Onboarding from './src/screens/Onboarding';
 import MenuScreen from './src/screens/MenuScreen';
 import Camera from './src/screens/Camera';
+import Capturas from './src/screens/Capturas';
 
 
 const Tab = createBottomTabNavigator();
@@ -23,6 +24,7 @@ function MyTab() {
       <Tab.Screen name="Onboarding" component={Onboarding} />
       <Tab.Screen name="MenuScreen" component={MenuScreen} />
       <Tab.Screen name="Camera" component={Camera} />
+      <Tab.Screen name="Capturas" component={Capturas} />
     </Tab.Navigator>
   );
 }

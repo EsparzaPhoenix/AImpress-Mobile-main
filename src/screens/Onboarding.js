@@ -15,19 +15,19 @@ const Onboarding = () => {
       loop={false}  
     >
       <View style={styles.slide}>
-        <Text style={styles.text}>Crie um currículo profissional de maneira rápida e fácil</Text>
+        <Text style={styles.text}>Poste foto dos Reciclaveis e veja quem pode reciclar por você</Text>
         <TouchableOpacity style={styles.skipButton} onPress={() => navigation.navigate('MenuScreen')}>
           <Text style={styles.skipButtonText}>Pular</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.slide}>
-        <Text style={styles.text}>Compartilhe suas informações ou conecte-se ao LinkedIn</Text>
+        <Text style={styles.text}>Receba Pontos pela reciclagem</Text>
         <TouchableOpacity style={styles.skipButton} onPress={() => navigation.navigate('MenuScreen')}>
           <Text style={styles.skipButtonText}>Pular</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.slide}>
-        <Text style={styles.text}>Revise e ajuste seu currículo conforme desejar</Text>
+        <Text style={styles.text}>Gaste seus pontos em itens de nossa loja</Text>
         <TouchableOpacity style={styles.skipButton} onPress={() => navigation.navigate('MenuScreen')}>
           <Text style={styles.skipButtonText}>Pular</Text>
         </TouchableOpacity>

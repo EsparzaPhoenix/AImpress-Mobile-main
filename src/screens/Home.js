@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import logoImage from '../../assets/images/ReciclaKiLogo.png';
 import globalStyle from '../styles/globalStyle';
 
 
@@ -8,7 +9,8 @@ const Home = () => {
 
   return (
     <View style={globalStyle.container}>
-      <Text style={globalStyle.projectName}>AImpress</Text>
+      <Image source={logoImage} style={{ width: 204, height: 237 }} />
+      <Text style={globalStyle.projectName}>ReciclaKi</Text>
       <TouchableOpacity 
         style={globalStyle.button} 
         onPress={() => navigation.navigate('Login')}
