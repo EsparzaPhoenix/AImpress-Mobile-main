@@ -10,8 +10,8 @@ import styles from '../styles/globalStyle';
 const Camera = ({ navigation }) => {
     const { user } = useAuth();
     console.log('Usuário autenticado:', user);  
-    const [description, setDescription] = useState('');
-    const [coordinate, setCoordinate] = useState('');
+    const [titulo, setTitulo] = useState('');
+    const [descricao, setDescricao] = useState('');
     const [image, setImage] = useState(null);
     const [uploading, setUploading] = useState(false);
 
@@ -62,49 +62,49 @@ const Camera = ({ navigation }) => {
     };
 
     const handleSubmit = async () => {
-        if (!description || !coordinate || !image) {
+        if (!titulo || !descricao || !image) {
             Alert.alert('Erro', 'Todos os campos são obrigatórios!');
             return;
         }
 
         try {
             const imageURL = await uploadImage(image);
-            const docRef = await addDoc(collection(db, 'chamados'), {
-                description,
-                coordinate,
+            const docRef = await addDoc(collection(db, 'posts'), {
+                titulo,
+                descricao,
                 imageURL,
                 userId: user.uid,
                 createdAt: new Date(),
             });
 
-            await setDoc(doc(db, 'chamados', docRef.id), { id: docRef.id }, { merge: true });
+            await setDoc(doc(db, 'posts', docRef.id), { id: docRef.id }, { merge: true });
 
-            Alert.alert('Sucesso', 'Chamado enviado com sucesso!');
+            Alert.alert('Sucesso', 'Post enviado com sucesso!');
             navigation.goBack();
         } catch (error) {
-            console.error('Erro ao enviar chamado:', error);
-            Alert.alert('Erro', 'Ocorreu um erro ao enviar o chamado.');
+            console.error('Erro ao enviar post:', error);
+            Alert.alert('Erro', 'Ocorreu um erro ao enviar o post.');
         }
     };
 
     return (
         <View style={styles.container}>
-            <Text style={[styles.text, styles.boldText, styles.projectName]}>Abrir Chamado</Text>
+            <Text style={[styles.text, styles.boldText, styles.projectName]}>Novo Post</Text>
             <View style={styles.card}>
                 <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
+                    <Text style={[styles.text, styles.boldText]}>Titulo do Post</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Titulo"
+                        value={titulo}
+                        onChangeText={setTitulo}
+                    />
                     <Text style={[styles.text, styles.boldText]}>Descrição</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Descrição"
-                        value={description}
-                        onChangeText={setDescription}
-                    />
-                    <Text style={[styles.text, styles.boldText]}>Coordenada</Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Coordenada"
-                        value={coordinate}
-                        onChangeText={setCoordinate}
+                        value={descricao}
+                        onChangeText={setDescricao}
                     />
                     <TouchableOpacity style={styles.button} onPress={pickImage}>
                         <Text style={styles.buttonText}>Tirar Foto</Text>
@@ -116,7 +116,7 @@ const Camera = ({ navigation }) => {
                         />
                     )}
                     <TouchableOpacity style={styles.button} onPress={handleSubmit} disabled={uploading}>
-                        <Text style={styles.buttonText}>{uploading ? 'Enviando...' : 'Enviar Chamado'}</Text>
+                        <Text style={styles.buttonText}>{uploading ? 'Enviando...' : 'Enviar Post'}</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </View>

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sprint2AImpress",
-    "slug": "sprint2AImpress",
+    "name": "global",
+    "slug": "global",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

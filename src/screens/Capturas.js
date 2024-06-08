@@ -13,7 +13,7 @@ const Capturas = () => {
     useEffect(() => {
         const fetchCapturas = async () => {
             try {
-                const q = query(collection(db, 'chamados'), where('userId', '==', user.uid));
+                const q = query(collection(db, 'posts'), where('userId', '==', user.uid));
                 const querySnapshot = await getDocs(q);
                 const capturasData = querySnapshot.docs.map(doc => doc.data());
                 setCapturas(capturasData);
@@ -45,8 +45,8 @@ const Capturas = () => {
                 capturas.map((captura, index) => (
                     <View key={index} style={styles.card}>
                         <Image source={{ uri: captura.imageURL }} style={{ width: 300, height: 200, borderRadius: 8 }} />
-                        <Text style={[styles.text, styles.centerText]}>{captura.description}</Text>
-                        <Text style={[styles.text, styles.centerText, { color: 'gray' }]}>{captura.coordinate}</Text>
+                        <Text style={[styles.text, styles.centerText]}>{captura.titulo}</Text>
+                        <Text style={[styles.text, styles.centerText, { color: 'gray' }]}>{captura.descricao}</Text>
                     </View>
                 ))
             ) : (
