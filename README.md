@@ -1,5 +1,15 @@
 # ReciclaKi
 
+## Integrantes 
+
+RM97887 - João Carlos França Figueiredo 
+
+RM550200 - Leonardo Oliveira Esparza 
+
+RM552421 - Flavio Sousa Vasconcelos 
+
+RM552368 - Wellington de Oliveira Urcino Da Silva 
+
 ## Introdução
 
 ReciclaKi é um aplicativo móvel projetado para capturar e gerenciar imagens. Ele oferece funcionalidades de autenticação de usuários, registro de novos usuários, reset de senha, captura de imagens e gerenciamento de perfil do usuário.
